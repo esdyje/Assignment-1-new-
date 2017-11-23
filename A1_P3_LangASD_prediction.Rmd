@@ -5,22 +5,6 @@ date: "September, 2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-setwd("~/OneDrive - Aarhus universitet/AU-Cognitive Science/3rd Semester/Experimental Methods 3/Exercise/Assignments/Assignment 1")
-
-#Load data
-dat2=read.csv("LU_test.csv")
-dat1=read.csv("demo_test.csv")
-dat3=read.csv("token_test.csv")
-traindata=read.csv("clean_data.csv")
-traindata=traindata[,-1]
-
-#load packages
-library(MuMIn);library(lmerTest); library(modelr);library(stringr); library(tidyverse);library(plyr);library(merTools); library(caret);library(Metrics);library(modelr)
-
-```
-
 Note: loops.
 For (i IN FOLDS)
 Sekect Data
@@ -38,6 +22,21 @@ N.B. There are several datasets for this exercise, so pay attention to which one
 * Demographic and clinical data: https://www.dropbox.com/s/ra99bdvm6fzay3g/demo_test.csv?dl=0
 * Utterance Length data: https://www.dropbox.com/s/uxtqqzl18nwxowq/LU_test.csv?dl=0
 * Word data: https://www.dropbox.com/s/1ces4hv8kh0stov/token_test.csv?dl=0
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/OneDrive - Aarhus universitet/AU-Cognitive Science/3rd Semester/Experimental Methods 3/Exercise/Assignments/Assignment 1")
+
+#Load data
+dat2=read.csv("LU_test.csv")
+dat1=read.csv("demo_test.csv")
+dat3=read.csv("token_test.csv")
+traindata=read.csv("clean_data.csv")
+traindata=traindata[,-1]
+
+#load packages
+library(MuMIn);library(lmerTest); library(modelr);library(stringr); library(tidyverse);library(plyr);library(merTools); library(caret);library(Metrics);library(modelr)
+
+```
 
 ### Exercise 1) Testing model performance
 
